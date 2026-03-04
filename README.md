@@ -1,26 +1,27 @@
 # 🔍 DeepFake Detection System
 
-A full-stack DeepFake Detection web application built using **Flask, TensorFlow, MTCNN, and OpenCV**.  
-The system analyzes uploaded images or videos and predicts whether the content is **REAL or FAKE** using deep learning techniques.
+A full-stack DeepFake Detection web application built using **Flask, TensorFlow, MTCNN, and OpenCV**.
+
+This system analyzes uploaded **images and videos** and predicts whether the content is **REAL or FAKE** using deep learning-based facial analysis.
 
 ---
 
-## 🚀 Features
+## 🚀 Live Project Overview
 
-- 🖼️ Image DeepFake Detection
-- 🎥 Video DeepFake Detection (Frame Sampling)
+The application consists of:
+
+- 🧠 Deep Learning Backend (Flask API)
+- 🖼️ Image & 🎥 Video Analysis Support
 - 🔍 Face Detection using MTCNN
-- 🧠 EfficientNet-B4 Based Architecture
-- 📊 Confidence Score & Probability Breakdown
-- 🌐 REST API Backend (Flask)
-- 💻 Interactive Frontend UI
-- ⚡ Demo Mode Support (Mock Predictions if model not loaded)
+- 📊 Confidence Score with Probability Breakdown
+- 🌐 Interactive Frontend UI
+- ⚡ Demo Mode (if trained model not loaded)
 
 ---
 
 ## 🏗️ Tech Stack
 
-**Backend**
+### 🔹 Backend
 - Flask
 - Flask-CORS
 - TensorFlow / Keras
@@ -28,7 +29,7 @@ The system analyzes uploaded images or videos and predicts whether the content i
 - MTCNN
 - NumPy
 
-**Frontend**
+### 🔹 Frontend
 - HTML
 - CSS
 - JavaScript (Fetch API)
@@ -51,11 +52,11 @@ Deepfake-Detection/
 
 ## ⚙️ Installation & Setup
 
-### 1️⃣ Clone the Repository
+### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
-cd YOUR-REPO-NAME
+git clone https://github.com/atul-kumar-30/Deepfake-Detection.git
+cd Deepfake-Detection
 ```
 
 ### 2️⃣ Install Dependencies
@@ -70,7 +71,7 @@ pip install -r requirements.txt
 python backend.py
 ```
 
-Backend will run on:
+Backend runs at:
 
 ```
 http://localhost:5000
@@ -78,36 +79,32 @@ http://localhost:5000
 
 ### 4️⃣ Open Frontend
 
-Open:
+Open `index.html` in your browser.
 
-```
-index.html
-```
-
-in your browser.
+Upload an image or video to analyze.
 
 ---
 
 ## 📡 API Endpoints
 
-### POST `/api/analyze`
-Upload and analyze image/video.
+### 🔹 POST `/api/analyze`
+Upload and analyze media file.
 
-Example using curl:
+Example:
 
 ```bash
 curl -X POST -F "file=@image.jpg" http://localhost:5000/api/analyze
 ```
 
-### GET `/api/health`
-Check backend health.
+### 🔹 GET `/api/health`
+Check backend status.
 
-### GET `/api/model-info`
-Get model metadata and status.
+### 🔹 GET `/api/model-info`
+Retrieve model metadata and loading status.
 
 ---
 
-## 🧠 Model Information
+## 🧠 Model Details
 
 - Architecture: EfficientNet-B4
 - Face Detection: MTCNN
@@ -118,24 +115,24 @@ Get model metadata and status.
   - FaceForensics++
   - Celeb-DF
 
-> ⚠️ If trained model file is not present, system runs in **Demo Mode** with simulated predictions.
+> ⚠️ If trained `.h5` model file is not found, system runs in **Demo Mode** with simulated predictions.
 
 ---
 
 ## 🎯 How It Works
 
-1. User uploads image/video.
-2. Face is extracted using MTCNN.
+1. User uploads image or video.
+2. MTCNN extracts the face.
 3. Face is resized and normalized.
-4. Deep learning model predicts probability.
-5. System returns:
+4. Model predicts deepfake probability.
+5. API returns:
    - REAL / FAKE verdict
-   - Confidence score
-   - Detailed analysis insights
+   - Confidence percentage
+   - Detailed analysis indicators
 
 ---
 
-## 📊 Example Response
+## 📊 Example API Response
 
 ```json
 {
@@ -149,21 +146,23 @@ Get model metadata and status.
 
 ---
 
-## 🛡️ Future Improvements
+## 🛡️ Future Enhancements
 
 - Real-time webcam detection
+- Model deployment on cloud
 - Docker containerization
-- Model optimization
-- Deployment on cloud (AWS / Render / Heroku)
+- Improved deepfake detection accuracy
+- Frontend UI enhancements
 
 ---
 
 ## 👨‍💻 Author
 
-**Atul Kumar**
+**Atul Kumar**  
+GitHub: https://github.com/atul-kumar-30
 
 ---
 
 ## 📜 License
 
-This project is for educational and research purposes.
+This project is built for educational and research purposes.
