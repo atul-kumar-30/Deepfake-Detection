@@ -251,4 +251,5 @@ def serve_frontend():
 if __name__ == '__main__':
     init_detector()
     load_model()
-    app.run(debug=True)
+    app.run(debug=True) 
+ 
