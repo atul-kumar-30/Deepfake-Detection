@@ -5,3 +5,7 @@ opencv-python
 werkzeug
 tensorflow
 mtcnn
+scikit-learn
+matplotlib
+seaborn
+tqdm

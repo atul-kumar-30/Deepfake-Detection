@@ -52,11 +52,12 @@ This system analyzes uploaded **images and videos** and predicts whether the con
 Deepfake-Detection/
 │
 ├── backend.py              # Flask API server & ML inference logic
-├── index.html              # Frontend web interface
+├── frontend.html           # Frontend web interface (v2.0 Pro) ✅
+├── index.html              # Legacy frontend (older version)
 ├── requirements.txt        # Python dependencies
 │
 ├── notebooks/
-│   └── training_complete.ipynb   # Model training notebook
+│   └── training_complete.ipynb   # Model training notebook (DFDC + FF++ + Celeb-DF)
 │
 ├── uploads/                # Temporary file upload storage
 │   └── .gitkeep            # Tracks empty uploads directory
@@ -87,6 +88,8 @@ conda activate deepfake
 ```bash
 pip install -r requirements.txt
 ```
+
+> Includes: Flask, TensorFlow, OpenCV, MTCNN, scikit-learn, matplotlib, seaborn, tqdm
 
 ### 4️⃣ Run the Backend Server
 
