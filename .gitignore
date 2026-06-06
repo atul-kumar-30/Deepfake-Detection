@@ -1,0 +1,8 @@
+# Ignore large dataset files
+final_data.npz
+
+# Ignore large deep learning models (GitHub size limit is 100MB)
+models/
+
+# Ignore temporary uploads
+uploads/
